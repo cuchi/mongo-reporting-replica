@@ -1,0 +1,27 @@
+version: "3.3"
+
+services:
+  mongo:
+    image: mongo:3.4
+    ports:
+      - 10001:27017
+    entrypoint:
+      - /entrypoint.sh
+      - --replSet
+      - appReplicaSet
+
+  mongo-replica:
+    image: mongo:3.4
+    ports:
+      - 10002:27017
+    entrypoint:
+      - /entrypoint.sh
+      - --replSet
+      - appReplicaSet
+
+  worker:
+    build: .
+    environment:
+      - MONGO_HOST=mongo
+    depends_on:
+      - mongo

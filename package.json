@@ -1,0 +1,12 @@
+{
+  "name": "mongo-replica-poc",
+  "version": "1.0.0",
+  "description": "Proof of Concept for running MongoDB with a read-only replica, for reporting purposes.",
+  "main": "worker.js",
+  "author": "Paulo Henrique Cuchi <paulo.cuchi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^1.29.0",
+    "mongodb": "^3.0.3"
+  }
+}
