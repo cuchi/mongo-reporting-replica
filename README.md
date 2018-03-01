@@ -34,3 +34,7 @@ docker-compose up -d worker
 
 You should be able to see the data being replicated from `localhost:10001` to
 `localhost:10002`.
+
+## What is missing?
+- For the sake of simplicity, there is no authentication setup in this example.
+This is something I will add later.
